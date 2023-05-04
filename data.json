@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "title": "ירושלים",
+        "details": "זה המרכז הגדול לתשמישי קדושה תפילין טליתות מזוזות סטים לחתני בר מצוה כיפות ציציות ריקמה שמות על סטים שקיות במקום ",
+        "coverImage": "https://lh3.googleusercontent.com/p/AF1QipOhgwqk4AnVQBKmXCzgNBV5ydyjXoiV8_1So50U=s680-w680-h510",
+        "footer": "",
+        "street": "מלכי ישראל 19",
+        "link": "#"
+    },
+    {
+        "id": 2,
+        "title": "בני ברק",
+        "details": "זה המרכז הגדול לתשמישי קדושה תפת ציציות רייות במקום ",
+        "coverImage": "https://lh5.googleusercontent.com/p/AF1QipPJs3VMQOcU-9keYJX9LjazbWvQC5tP-VwGg0On=w254-h338-k-no",
+        "footer": "",
+        "street": "הרב שך 8",
+        "link": "#"
+    },
+    {
+        "id": 3,
+        "title": "ירושלים",
+        "details": "זה המרכז הגדול לתשמישי קדושה תפילין טליתות מזוזות סטים לחתני בר מצוה כיפות ציציות ריקמה שמות על סטים שקיות במקום ",
+        "coverImage": "https://lh3.googleusercontent.com/p/AF1QipMbGvIIHAzICioVtiaKJn2pj-KEtwqw7lGti1p4=s680-w680-h510",
+        "footer": "",
+        "street": "מלכי ישראל 31",
+        "link": "#"
+    }
+]
