@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="טלית סנטר">
+    <meta name="description" content="טלית סנטר היא רשת רחבה באזור ירושלים אשר מייצרת טליתות וציציות באיכות הגבוהה ביותר שיש, בנוסף מיוצרים גם תפילין טלית ציציות כיפות מוצרים לשב ועוד.">
+    <meta name="keywords" content="טלית, ציצית, תפילין">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="revisit-after" content="1 days">
+    <meta name="rating" content="general">
+
     <title>טלית סנטר</title>
     <link rel="icon" href="logoMain.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Karantina:wght@700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- carousel -->
@@ -29,7 +33,9 @@
 </head>
 
 <body>
-    <div class="menu-toggle">
+    <div id="gray-screen" id="gray-screen"></div>
+
+    <div class="menu-toggle" id="menuBtnToggle">
         <div class="hamburger">
             <span></span>
         </div>
@@ -38,6 +44,9 @@
         <nav>
             <img src="logoMain.png" class="logo" alt="">
             <div class="itemsMenu">
+                <a class="menuItem storeBtn">
+                    חנות
+                </a>
                 <a class="menuItem undAni" href="#part1">
                     ראשי
                 </a>
@@ -65,60 +74,22 @@
                 <div class="side1">
                     <img class="logoMainBack beatAni" alt="">
                     <h1 class="mainHeader">טלית סנטר</h1>
-                    <p>רשת טלית סנטר יש לה שלוש סניפים ירושלים ובבני ברק מלכי ישראל 19, 31 בבני ברק הרב שך 8 זה מרכז
-                        הגדול לתשמישי קדושה תפילין טליתות מזוזות סטים לחתני בר מצוה כיפות ציציות ריקמה שמות על סטים
-                        שקיות במקום
+                    <p>רשת טלית סנטר יש לה שלוש סניפים ירושלים ובבני ברק מלכי ישראל 19, 31 בבני ברק הרב שך 8 זה מרכז הגדול לתשמישי קדושה תפילין טליתות מזוזות סטים לחתני בר מצוה כיפות ציציות ריקמה שמות על סטים שקיות במקום
                     </p>
-                    <p>רשת טלית סנטר יש לה שלוש סניפים ירושלים ובבני ברק מלכי ישראל 19, 31 בבני ברק הרב שך 8 זה מרכז
-                        הגדול לתשמישי קדושה תפילין טליתות מזוזות סטים לחתני בר מצוה כיפות ציציות ריקמה שמות על סטים
-                        שקיות במקום </p>
+                    <p>רשת טלית סנטר יש לה שלוש סניפים ירושלים ובבני ברק מלכי ישראל 19, 31 בבני ברק הרב שך 8 זה מרכז הגדול לתשמישי קדושה תפילין טליתות מזוזות סטים לחתני בר מצוה כיפות ציציות ריקמה שמות על סטים שקיות במקום </p>
                     <a href="">עבור לחנות</a>
                 </div>
                 <div class="offersMain side2">
-                    <div class="itemColumn itemColumn1">
+
+                    <div class="itemColumn itemColumn1 cont-home">
+                        <template id="home-page-temp">
                         <div class="itemOffer ">
-                            <img src="talit.png" alt="">
-                            <span>טליתות</span>
+                            <img class="imgIcon" alt="" id="imgHomeIcon">
+                            <span id="subImgText"><div class="skeleton skeleton-text"></div></span>
                         </div>
-                        <div class="itemOffer ">
-                            <img src="kipa.png" alt="">
-                            <span>כיפות</span>
-                        </div>
-                        <div class="itemOffer">
-                            <img src="sidur.png" alt="">
-                            <span>סידורים</span>
-                        </div>
+                        </template>
                     </div>
 
-                    <div class="itemColumn itemColumn2">
-                        <div class="itemOffer">
-                            <img src="yashiva.png" alt="">
-                            <span>לשבת</span>
-                        </div>
-                        <div class="itemOffer">
-                            <img src="mazuzot.png" alt="">
-                            <span>מזוזות</span>
-                        </div>
-                        <div class="itemOffer">
-                            <img src="ptilim.png" alt="">
-                            <span>פתילים</span>
-                        </div>
-                    </div>
-
-                    <div class="itemColumn itemColumn3">
-                        <div class="itemOffer">
-                            <img src="kisuy.png" alt="">
-                            <span>כיסויים</span>
-                        </div>
-                        <div class="itemOffer">
-                            <img src="tfilin.png" alt="">
-                            <span>תפילין</span>
-                        </div>
-                        <div class="itemOffer">
-                            <img src="tziziot.png" alt="">
-                            <span>ציציות</span>
-                        </div>
-                    </div>
                 </div>
 
             </div>
@@ -152,8 +123,7 @@
 
 
         <div class="custom-shape-divider-top-1629397427">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                preserveAspectRatio="none">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path
                     d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
                     opacity=".25" class="shape-fill"></path>
@@ -166,8 +136,7 @@
             </svg>
         </div>
         <div class="sec-1-center" id="part2">
-            <h1><i class="fa fa-map-marker" aria-hidden="true"></i>
-                רשימת סניפים</h1>
+            <h1><i class="fa fa-map-marker" aria-hidden="true"></i> רשימת סניפים</h1>
 
             <div class="branchesMain">
 
@@ -242,85 +211,56 @@
             <div class="backFilter"></div>
             <div class="galleryCont">
                 <div class="galleryGrid">
-                    <a class="my-image-links" data-gall="gallery01"
-                        href="https://lh3.googleusercontent.com/p/AF1QipM8xVPrR6IRUqaof44iEo4DPiC1XgdxYI9ircbT=w768-h768-n-o-v1">
+                    <a class="my-image-links" data-gall="gallery01" href="https://lh3.googleusercontent.com/p/AF1QipM8xVPrR6IRUqaof44iEo4DPiC1XgdxYI9ircbT=w768-h768-n-o-v1">
                         <div lazy="true" class="cardImg skeleton">
-                            <img loading="lazy"
-                                src="https://lh3.googleusercontent.com/p/AF1QipM8xVPrR6IRUqaof44iEo4DPiC1XgdxYI9ircbT=w768-h768-n-o-v1"
-                                alt="">
+                            <img loading="lazy" src="https://lh3.googleusercontent.com/p/AF1QipM8xVPrR6IRUqaof44iEo4DPiC1XgdxYI9ircbT=w768-h768-n-o-v1" alt="">
                         </div>
                     </a>
-                    <a class="my-image-links" data-gall="gallery01"
-                        href="https://lh3.googleusercontent.com/p/AF1QipOGk_h7QbE3u1scar043zqEh1hy1eayQXBliE7x=w768-h768-n-o-v1">
+                    <a class="my-image-links" data-gall="gallery01" href="https://lh3.googleusercontent.com/p/AF1QipOGk_h7QbE3u1scar043zqEh1hy1eayQXBliE7x=w768-h768-n-o-v1">
                         <div lazy="true" class="cardImg skeleton">
-                            <img loading="lazy"
-                                src="https://lh3.googleusercontent.com/p/AF1QipOGk_h7QbE3u1scar043zqEh1hy1eayQXBliE7x=w768-h768-n-o-v1"
-                                alt="">
+                            <img loading="lazy" src="https://lh3.googleusercontent.com/p/AF1QipOGk_h7QbE3u1scar043zqEh1hy1eayQXBliE7x=w768-h768-n-o-v1" alt="">
                         </div>
                     </a>
-                    <a class="my-image-links" data-gall="gallery01"
-                        href="https://lh3.googleusercontent.com/p/AF1QipMq9D8QqUNU97Hapc0eE2yDHd7vgeH-r_rY_a7A=w768-h768-n-o-v1">
+                    <a class="my-image-links" data-gall="gallery01" href="https://lh3.googleusercontent.com/p/AF1QipMq9D8QqUNU97Hapc0eE2yDHd7vgeH-r_rY_a7A=w768-h768-n-o-v1">
                         <div lazy="true" class="cardImg skeleton">
-                            <img loading="lazy"
-                                src="https://lh3.googleusercontent.com/p/AF1QipMq9D8QqUNU97Hapc0eE2yDHd7vgeH-r_rY_a7A=w768-h768-n-o-v1"
-                                alt="">
+                            <img loading="lazy" src="https://lh3.googleusercontent.com/p/AF1QipMq9D8QqUNU97Hapc0eE2yDHd7vgeH-r_rY_a7A=w768-h768-n-o-v1" alt="">
                         </div>
                     </a>
-                    <a class="my-image-links" data-gall="gallery01"
-                        href="https://lh3.googleusercontent.com/p/AF1QipOhgwqk4AnVQBKmXCzgNBV5ydyjXoiV8_1So50U=w768-h768-n-o-v1">
+                    <a class="my-image-links" data-gall="gallery01" href="https://lh3.googleusercontent.com/p/AF1QipOhgwqk4AnVQBKmXCzgNBV5ydyjXoiV8_1So50U=w768-h768-n-o-v1">
                         <div lazy="true" class="cardImg skeleton">
-                            <img loading="lazy"
-                                src="https://lh3.googleusercontent.com/p/AF1QipOhgwqk4AnVQBKmXCzgNBV5ydyjXoiV8_1So50U=w768-h768-n-o-v1"
-                                alt="">
+                            <img loading="lazy" src="https://lh3.googleusercontent.com/p/AF1QipOhgwqk4AnVQBKmXCzgNBV5ydyjXoiV8_1So50U=w768-h768-n-o-v1" alt="">
                         </div>
                     </a>
-                    <a class="my-image-links" data-gall="gallery01"
-                        href="https://lh3.googleusercontent.com/p/AF1QipODhHYoWjWqZTmFhSNt9o_y1VqdFhfJ88pc1t5V=w768-h768-n-o-v1">
+                    <a class="my-image-links" data-gall="gallery01" href="https://lh3.googleusercontent.com/p/AF1QipODhHYoWjWqZTmFhSNt9o_y1VqdFhfJ88pc1t5V=w768-h768-n-o-v1">
                         <div lazy="true" class="cardImg skeleton">
-                            <img loading="lazy"
-                                src="https://lh3.googleusercontent.com/p/AF1QipODhHYoWjWqZTmFhSNt9o_y1VqdFhfJ88pc1t5V=w768-h768-n-o-v1"
-                                alt="">
+                            <img loading="lazy" src="https://lh3.googleusercontent.com/p/AF1QipODhHYoWjWqZTmFhSNt9o_y1VqdFhfJ88pc1t5V=w768-h768-n-o-v1" alt="">
                         </div>
                     </a>
-                    <a class="my-image-links" data-gall="gallery01"
-                        href="https://lh3.googleusercontent.com/p/AF1QipPxsxJHdg-anDxb7VSxWHqZmJtPdUJsvb8PVzMB=w768-h768-n-o-v1">
+                    <a class="my-image-links" data-gall="gallery01" href="https://lh3.googleusercontent.com/p/AF1QipPxsxJHdg-anDxb7VSxWHqZmJtPdUJsvb8PVzMB=w768-h768-n-o-v1">
                         <div lazy="true" class="cardImg skeleton">
-                            <img loading="lazy"
-                                src="https://lh3.googleusercontent.com/p/AF1QipPxsxJHdg-anDxb7VSxWHqZmJtPdUJsvb8PVzMB=w768-h768-n-o-v1"
-                                alt="">
+                            <img loading="lazy" src="https://lh3.googleusercontent.com/p/AF1QipPxsxJHdg-anDxb7VSxWHqZmJtPdUJsvb8PVzMB=w768-h768-n-o-v1" alt="">
                         </div>
                     </a>
-                    <a class="my-image-links" data-gall="gallery01"
-                        href="https://lh3.googleusercontent.com/p/AF1QipPA8shM7h8Dme-qgvbAXDMDp_wMCZbVvQRcCqge=w768-h768-n-o-v1">
+                    <a class="my-image-links" data-gall="gallery01" href="https://lh3.googleusercontent.com/p/AF1QipPA8shM7h8Dme-qgvbAXDMDp_wMCZbVvQRcCqge=w768-h768-n-o-v1">
                         <div lazy="true" class="cardImg skeleton">
-                            <img loading="lazy"
-                                src="https://lh3.googleusercontent.com/p/AF1QipPA8shM7h8Dme-qgvbAXDMDp_wMCZbVvQRcCqge=w768-h768-n-o-v1"
-                                alt="">
+                            <img loading="lazy" src="https://lh3.googleusercontent.com/p/AF1QipPA8shM7h8Dme-qgvbAXDMDp_wMCZbVvQRcCqge=w768-h768-n-o-v1" alt="">
                         </div>
                     </a>
-                    <a class="my-image-links" data-gall="gallery01"
-                        href="https://lh3.googleusercontent.com/p/AF1QipOsa00_7dH3NG19m8-KskqvAuDJmURUPyACfFgC=w768-h768-n-o-v1">
+                    <a class="my-image-links" data-gall="gallery01" href="https://lh3.googleusercontent.com/p/AF1QipOsa00_7dH3NG19m8-KskqvAuDJmURUPyACfFgC=w768-h768-n-o-v1">
                         <div lazy="true" class="cardImg skeleton">
-                            <img loading="lazy"
-                                src="https://lh3.googleusercontent.com/p/AF1QipOsa00_7dH3NG19m8-KskqvAuDJmURUPyACfFgC=w768-h768-n-o-v1"
-                                alt="">
+                            <img loading="lazy" src="https://lh3.googleusercontent.com/p/AF1QipOsa00_7dH3NG19m8-KskqvAuDJmURUPyACfFgC=w768-h768-n-o-v1" alt="">
                         </div>
                     </a>
-                    <a class="my-image-links" data-gall="gallery01"
-                        href="https://lh3.googleusercontent.com/p/AF1QipMDQo13_43LLARlXtkYN8xgSsufwZ34ZYpSCEtj=w768-h768-n-o-v1">
+                    <a class="my-image-links" data-gall="gallery01" href="https://lh3.googleusercontent.com/p/AF1QipMDQo13_43LLARlXtkYN8xgSsufwZ34ZYpSCEtj=w768-h768-n-o-v1">
                         <div lazy="true" class="cardImg skeleton">
-                            <img loading="lazy"
-                                src="https://lh3.googleusercontent.com/p/AF1QipMDQo13_43LLARlXtkYN8xgSsufwZ34ZYpSCEtj=w768-h768-n-o-v1"
-                                alt="">
+                            <img loading="lazy" src="https://lh3.googleusercontent.com/p/AF1QipMDQo13_43LLARlXtkYN8xgSsufwZ34ZYpSCEtj=w768-h768-n-o-v1" alt="">
                         </div>
                     </a>
                 </div>
                 <div class="expCont">
                     <h2>גלרית החנות</h2>
-                    <p>הגלריה שלנו, גלריה לעיצוב הבית נעמי היא מרכז למעצבי פנים. גלריה ייחודית לעיצוב והלבשת הבית, תוכלו
-                        למצוא אצלנו תאורה בהתאמה אישית, רהיטים, חפצים, תכשיטים ויבוא רהיטים ואקססוריז מהולנד.</p>
-                    <p>אנחנו כאן כדי שתתאהבו בעיצוב, שתתאהבו ביופי, שתתאהבו בחומרים הטבעיים, שתתאהבו בביתכם היפה,
-                        שתתאהבו באור שמקרין ביתכם, שתתאהבו בעצמכם!</p>
+                    <p>הגלריה שלנו, גלריה לעיצוב הבית נעמי היא מרכז למעצבי פנים. גלריה ייחודית לעיצוב והלבשת הבית, תוכלו למצוא אצלנו תאורה בהתאמה אישית, רהיטים, חפצים, תכשיטים ויבוא רהיטים ואקססוריז מהולנד.</p>
+                    <p>אנחנו כאן כדי שתתאהבו בעיצוב, שתתאהבו ביופי, שתתאהבו בחומרים הטבעיים, שתתאהבו בביתכם היפה, שתתאהבו באור שמקרין ביתכם, שתתאהבו בעצמכם!</p>
                     <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i>למוצרי החנות
                     </a>
                 </div>
@@ -331,107 +271,33 @@
             <div class="container-slider carousel">
 
                 <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="thumb-wrapper item-c">
+                    <div class="swiper-wrapper swiper-cont">
 
-                                <div class="img-box">
-                                    <img loading="lazy"
-                                        src="https://www.judaica.com/media/catalog/product/t/r/traditional-black-silver-stripes-wool-tallit-19695-small.jpg?width=500&height=500&store=judaica_sv_migrated&image-type=small_image"
-                                        class="img-fluid" alt="">
-                                </div>
-                                <div class="thumb-content">
-                                    <h4>טלית כחולה</h4>
-                                    <div class="star-rating">
+                        <template id="shop-card-temp">
+                            <div class="swiper-slide">
+                                <div class="thumb-wrapper item-c">
 
+                                    <div class="img-box">
+                                        <img loading="lazy" class="img-fluid skeleton" id="product-image" alt="">
                                     </div>
-                                    <p class="item-price"><b>₪369.00</b></p>
-                                    <a href="#" class="btn btn-primary"><i class="fa fa-shopping-bag"
-                                            aria-hidden="true"></i>
-                                        ראה בחנות</a>
+                                    <div class="thumb-content">
+                                        <h4 id="header-item">
+                                        <div class="skeleton skeleton-text"></div>
+                                        </h4>
+                                        
+                                        <div class="item-price" id="item-price">                                
+                                            <div class="skeleton skeleton-text skeleton-text__body"></div>
+                                        </div>
+                                    <a id="card-link-product">
+                                        <div class="card__footer btn btn-primary" id="card-footer-product">
+                                            <div class="skeleton skeleton-footer"></div>
+                                        </div>
+                                    </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="thumb-wrapper item-c">
+                        </template>
 
-                                <div class="img-box">
-                                    <img loading="lazy"
-                                        src="https://www.judaica.com/media/catalog/product/t/r/traditional-black-silver-stripes-wool-tallit-19695-small.jpg?width=500&height=500&store=judaica_sv_migrated&image-type=small_image"
-                                        class="img-fluid" alt="">
-                                </div>
-                                <div class="thumb-content">
-                                    <h4>טלית כחולה</h4>
-                                    <div class="star-rating">
-
-                                    </div>
-                                    <p class="item-price"><b>₪369.00</b></p>
-                                    <a href="#" class="btn btn-primary"><i class="fa fa-shopping-bag"
-                                            aria-hidden="true"></i>
-                                        ראה בחנות</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="thumb-wrapper item-c">
-
-                                <div class="img-box">
-                                    <img loading="lazy"
-                                        src="https://www.judaica.com/media/catalog/product/t/r/traditional-black-silver-stripes-wool-tallit-19695-small.jpg?width=500&height=500&store=judaica_sv_migrated&image-type=small_image"
-                                        class="img-fluid" alt="">
-                                </div>
-                                <div class="thumb-content">
-                                    <h4>טלית כחולה</h4>
-                                    <div class="star-rating">
-
-                                    </div>
-                                    <p class="item-price"><b>₪369.00</b></p>
-                                    <a href="#" class="btn btn-primary"><i class="fa fa-shopping-bag"
-                                            aria-hidden="true"></i>
-                                        ראה בחנות</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="thumb-wrapper item-c">
-
-                                <div class="img-box">
-                                    <img loading="lazy"
-                                        src="https://www.judaica.com/media/catalog/product/t/r/traditional-black-silver-stripes-wool-tallit-19695-small.jpg?width=500&height=500&store=judaica_sv_migrated&image-type=small_image"
-                                        class="img-fluid" alt="">
-                                </div>
-                                <div class="thumb-content">
-                                    <h4>טלית כחולה</h4>
-                                    <div class="star-rating">
-
-                                    </div>
-                                    <p class="item-price"><b>₪369.00</b></p>
-                                    <a href="#" class="btn btn-primary"><i class="fa fa-shopping-bag"
-                                            aria-hidden="true"></i>
-                                        ראה בחנות</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="thumb-wrapper item-c">
-
-                                <div class="img-box">
-                                    <img loading="lazy"
-                                        src="https://www.judaica.com/media/catalog/product/t/r/traditional-black-silver-stripes-wool-tallit-19695-small.jpg?width=500&height=500&store=judaica_sv_migrated&image-type=small_image"
-                                        class="img-fluid" alt="">
-                                </div>
-                                <div class="thumb-content">
-                                    <h4>טלית כחולה</h4>
-                                    <div class="star-rating">
-
-                                    </div>
-                                    <p class="item-price"><b>₪369.00</b></p>
-                                    <a href="#" class="btn btn-primary"><i class="fa fa-shopping-bag"
-                                            aria-hidden="true"></i>
-                                        ראה בחנות</a>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="swiper-pagination"></div>
 
@@ -464,8 +330,7 @@
                     <div class="contDetail">
                         <div class="contactUs itemColAb">
                             <h3>מספרי פלאפון</h3>
-                            <a target="_blank"
-                                href="https://api.whatsapp.com/send?phone=972524002500&text="><span>052-400-2500
+                            <a target="_blank" href="https://api.whatsapp.com/send?phone=972524002500&text="><span>052-400-2500
                                 </span></a>
                             <span>02-502-3828
                             </span>
@@ -539,6 +404,11 @@
                     spaceBetween: 20,
                     slidesPerGroup: 1,
                 },
+                570: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                    slidesPerGroup: 2,
+                },
                 620: {
                     slidesPerView: 2,
                     spaceBetween: 20,
@@ -555,9 +425,9 @@
                     slidesPerGroup: 3,
                 },
                 1200: {
-                    slidesPerView: 3,
+                    slidesPerView: 4,
                     spaceBetween: 20,
-                    slidesPerGroup: 3,
+                    slidesPerGroup: 4,
                 }
 
             }
@@ -565,7 +435,6 @@
     </script>
 
     <script>
-
         //Clone the card template
         const containerRev = document.querySelector(".review-sec");
         const cardTemplateRev = document.getElementById("card-template-review");
@@ -593,10 +462,8 @@
                     containerRev.append(div);
                 });
             });
-
     </script>
     <script>
-
         //Clone the card template
         const container = document.querySelector(".branchesMain");
         const cardTemplate = document.getElementById("card-template");
@@ -622,7 +489,53 @@
                     container.append(div);
                 });
             });
+    </script>
+    <script>
+        //Clone the card template
+        const containerShop = document.querySelector(".swiper-cont");
+        const cardTemplateShop = document.getElementById("shop-card-temp");
+        for (let i = 0; i < 6; i++) {
+            containerShop.append(cardTemplateShop.content.cloneNode(true));
+        }
 
+        fetch("data-shop.json")
+            .then((response) => response.json())
+            .then((posts) => {
+                containerShop.innerHTML = "";
+                posts.forEach((post) => {
+                    const div = cardTemplateShop.content.cloneNode(true);
+                    div.getElementById("item-price").textContent = post.priceProduct;
+                    div.getElementById("header-item").textContent = post.titleProduct;
+                    div.getElementById("product-image").src = post.thumbImage;
+                    div.getElementById("card-link-product").href = post.footerShop;
+                    div.getElementById(
+                        "card-footer-product"
+                    ).innerHTML = `<i class="fa fa-shopping-bag"
+                                                aria-hidden="true"></i>
+                                            ראה בחנות`;
+                    containerShop.append(div);
+                });
+            });
+    </script>
+    <script>
+        //Clone the card template
+        const containerHome = document.querySelector(".cont-home");
+        const cardTemplateHome = document.getElementById("home-page-temp");
+        for (let i = 0; i < 9; i++) {
+            containerHome.append(cardTemplateHome.content.cloneNode(true));
+        }
+
+        fetch("home-page.json")
+            .then((response) => response.json())
+            .then((posts) => {
+                containerHome.innerHTML = "";
+                posts.forEach((post) => {
+                    const div = cardTemplateHome.content.cloneNode(true);
+                    div.getElementById("imgHomeIcon").src = post.imgProduct;
+                    div.getElementById("subImgText").textContent = post.textProduct;
+                    containerHome.append(div);
+                });
+            });
     </script>
     <script src="assets/VenoBox-master/dist/venobox.min.js"></script>
     <script>
@@ -639,7 +552,7 @@
             titleStyle: 'bar'
         });
     </script>
-
+    <script src="script.js"></script>
 </body>
 
 
