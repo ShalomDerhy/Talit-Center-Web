@@ -24,16 +24,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- carousel -->
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
 
     <!-- lightbox -->
     <link rel="stylesheet" href="assets/VenoBox-master/dist/venobox.min.css">
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+
+    <script src="assets/VenoBox-master/dist/venobox.min.js"></script>
+
 </head>
 
-<body>
+<body id="talit-body">
+    <div class="shadow-sidebar" id="shadow-sidebarID"></div>
     <div id="gray-screen" id="gray-screen"></div>
+    <a class="btnAnchor" href="#">
+        <div id="btnApp"><i class="fa fa-angle-up" aria-hidden="true"></i>
+        </div>
+    </a>
 
     <div class="menu-toggle" id="menuBtnToggle">
         <div class="hamburger">
@@ -375,186 +387,8 @@
 
     <!-- script tags -->
 
-    <script>
-        const menu_toggle = document.querySelector('.menu-toggle');
-        const sidebar = document.querySelector('.sidebar');
-
-        menu_toggle.addEventListener('click', () => {
-            menu_toggle.classList.toggle('is-active');
-            sidebar.classList.toggle('is-active');
-        });
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            freeMode: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            // Responsive breakpoints
-            breakpoints: {
-                320: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                    slidesPerGroup: 1,
-                },
-                570: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                    slidesPerGroup: 2,
-                },
-                620: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                    slidesPerGroup: 2,
-                },
-                767: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                    slidesPerGroup: 2,
-                },
-                991: {
-                    slidesPerView: 3,
-                    spaceBetween: 10,
-                    slidesPerGroup: 3,
-                },
-                1200: {
-                    slidesPerView: 4,
-                    spaceBetween: 20,
-                    slidesPerGroup: 4,
-                }
-
-            }
-        });
-    </script>
-
-    <script>
-        //Clone the card template
-        const containerRev = document.querySelector(".review-sec");
-        const cardTemplateRev = document.getElementById("card-template-review");
-        for (let i = 0; i < 4; i++) {
-            containerRev.append(cardTemplateRev.content.cloneNode(true));
-        }
-
-        fetch("data-reviews.json")
-            .then((response) => response.json())
-            .then((posts) => {
-                containerRev.innerHTML = "";
-                posts.forEach((review) => {
-                    const div = cardTemplateRev.content.cloneNode(true);
-                    div.getElementById("review-desc").textContent = review.desc;
-                    div.getElementById("profile-pic").src = review.profilePic;
-                    div.getElementById("name-review").textContent = review.header;
-                    div.getElementById(
-                        "rating"
-                    ).innerHTML = `<i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                        `;
-                    containerRev.append(div);
-                });
-            });
-    </script>
-    <script>
-        //Clone the card template
-        const container = document.querySelector(".branchesMain");
-        const cardTemplate = document.getElementById("card-template");
-        for (let i = 0; i < 3; i++) {
-            container.append(cardTemplate.content.cloneNode(true));
-        }
-
-        fetch("data.json")
-            .then((response) => response.json())
-            .then((posts) => {
-                container.innerHTML = "";
-                posts.forEach((post) => {
-                    const div = cardTemplate.content.cloneNode(true);
-                    div.getElementById("street-address").textContent = post.street;
-                    div.getElementById("card-title").textContent = post.title;
-                    div.getElementById("card-details").textContent = post.details;
-                    div.getElementById("cover-img").src = post.coverImage;
-                    div.getElementById("card-link").href = post.footer;
-                    div.getElementById(
-                        "card-footer"
-                    ).innerHTML = `
-                        ראה במפה<i class="fa fa-location-arrow" aria-hidden="true"></i>`;
-                    container.append(div);
-                });
-            });
-    </script>
-    <script>
-        //Clone the card template
-        const containerShop = document.querySelector(".swiper-cont");
-        const cardTemplateShop = document.getElementById("shop-card-temp");
-        for (let i = 0; i < 6; i++) {
-            containerShop.append(cardTemplateShop.content.cloneNode(true));
-        }
-
-        fetch("data-shop.json")
-            .then((response) => response.json())
-            .then((posts) => {
-                containerShop.innerHTML = "";
-                posts.forEach((post) => {
-                    const div = cardTemplateShop.content.cloneNode(true);
-                    div.getElementById("item-price").textContent = post.priceProduct;
-                    div.getElementById("header-item").textContent = post.titleProduct;
-                    div.getElementById("product-image").src = post.thumbImage;
-                    div.getElementById("card-link-product").href = post.footerShop;
-                    div.getElementById(
-                        "card-footer-product"
-                    ).innerHTML = `<i class="fa fa-shopping-bag"
-                                                aria-hidden="true"></i>
-                                            ראה בחנות`;
-                    containerShop.append(div);
-                });
-            });
-    </script>
-    <script>
-        //Clone the card template
-        const containerHome = document.querySelector(".cont-home");
-        const cardTemplateHome = document.getElementById("home-page-temp");
-        for (let i = 0; i < 9; i++) {
-            containerHome.append(cardTemplateHome.content.cloneNode(true));
-        }
-
-        fetch("home-page.json")
-            .then((response) => response.json())
-            .then((posts) => {
-                containerHome.innerHTML = "";
-                posts.forEach((post) => {
-                    const div = cardTemplateHome.content.cloneNode(true);
-                    div.getElementById("imgHomeIcon").src = post.imgProduct;
-                    div.getElementById("subImgText").textContent = post.textProduct;
-                    containerHome.append(div);
-                });
-            });
-    </script>
-    <script src="assets/VenoBox-master/dist/venobox.min.js"></script>
-    <script>
-        new VenoBox({
-            selector: '.my-image-links',
-            numeration: true,
-            infinigall: true,
-            spinner: 'grid',
-            ratio: '1x1',
-            popup: true,
-            navigation: true,
-            navKeyboard: true,
-            navSpeed: 200,
-            titleStyle: 'bar'
-        });
-    </script>
     <script src="script.js"></script>
+
 </body>
-
-
 
 </html>
