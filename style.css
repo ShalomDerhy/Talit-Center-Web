@@ -3,6 +3,7 @@
 * {
     outline: none;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -68,6 +69,10 @@ body {
     background-color: #3065b3;
 }
 
+.main {
+    height: 100vh;
+}
+
 a:hover {
     color: #c1cbd5 !important;
     text-decoration: none !important;
@@ -92,7 +97,7 @@ a:hover {
 
 .main {
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: auto;
 }
 
 @media (min-width: 572px) {
@@ -510,7 +515,7 @@ a:hover {
     box-shadow: 0px 8px 25px #0000001a;
     background: white;
     position: relative;
-    width: 18rem;
+    width: 17rem;
     height: fit-content;
     padding: 0.6rem 0.4rem;
     padding-top: 0.4rem;
@@ -2035,14 +2040,3 @@ img[alt] {
 #btnApp:hover {
     transition: 0.2s all ease-in-out;
 }
-
-
-/* .fadeOut {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.fadeIn {
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-} */
